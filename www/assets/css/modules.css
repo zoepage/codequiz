@@ -1,0 +1,31 @@
+/* ==========================================================================
+   specify all the modules 
+   ========================================================================== */
+
+/* --- Hoodie Sign In / Sign Up / Sign out stylings --- */
+/* hide contents until we know if user is signed in or not */
+body .hoodie-account-signedin,
+body .hoodie-account-signedout,
+body .hoodie-account-error {
+  display: none;
+}
+
+html[data-hoodie-account-status=signedin]  .hoodie-account-signedin,
+html[data-hoodie-account-status=error]     .hoodie-account-error,
+html[data-hoodie-account-status=signedout] .hoodie-account-signedout {
+  display: block;
+}
+
+.btn-group button:focus { outline: none; }
+
+.btn-group button.dropdown-toggle {
+	width: 40px;
+}
+
+.dropdown-menu {
+	top: 12px;
+	border: none;
+}
+
+.dropdown-menu li {  border-bottom:1px solid #efefef; }
+.dropdown-menu li:last-child { border-bottom: none; }
