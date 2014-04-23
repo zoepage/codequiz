@@ -13,11 +13,11 @@ angular.module('codeQuiz')
         templateUrl: 'views/WelcomeView.html'
       })
       .when('/signIn', {
-        //controller: 'SignInCtrl',
+        controller: 'SignInCtrl',
         templateUrl: 'views/SignInView.html'
       })
       .when('/signUp', {
-        //controller: 'SignInCtrl',
+        //controller: 'SignUpCtrl',
         templateUrl: 'views/SignUpView.html'
       })
       .otherwise({

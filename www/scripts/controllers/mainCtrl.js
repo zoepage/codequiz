@@ -8,4 +8,6 @@ angular.module('codeQuiz')
       $location.path('/welcome');
     }
 
+    $scope.account = hoodieAccount;
+
   });
