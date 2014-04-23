@@ -124,3 +124,11 @@ html, body, main {
   to {
     height: -webkit-calc(100% - 30px);
     height: calc(100% - 30px); } }
+
+.signInPageContainer {
+  background-color: #ff8e8e;
+  height: 100%; }
+
+.signUpPageContainer {
+  background-color: #67c7e2;
+  height: 100%; }

@@ -12,6 +12,14 @@ angular.module('codeQuiz')
         controller: 'WelcomeCtrl',
         templateUrl: 'views/WelcomeView.html'
       })
+      .when('/signIn', {
+        //controller: 'SignInCtrl',
+        templateUrl: 'views/SignInView.html'
+      })
+      .when('/signUp', {
+        //controller: 'SignInCtrl',
+        templateUrl: 'views/SignUpView.html'
+      })
       .otherwise({
         redirectTo: '/'
       });

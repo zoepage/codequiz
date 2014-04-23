@@ -1,1 +1,6 @@
-@import 'welcome.scss';
+$color1: #67C7E2;
+$color2: #FF8E8E;
+
+@import 'welcome';
+@import 'signIn';
+@import 'signUp';
