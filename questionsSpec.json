@@ -1,0 +1,10 @@
+{
+  "type": "question",
+  "id": "UUID by Hoodie",
+  "category": "JavaScript - The Cool Stuff",
+  "question": "Is Hoodie Cool?",
+  "answers": [
+    "What is Hoodie?", "Nope!", "Hell yes <3", "I prefer shirts."
+  ],
+  "rightAnswer": 2
+}
