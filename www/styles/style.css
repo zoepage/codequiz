@@ -1,0 +1,52 @@
+html, body, main {
+  height: 100%; }
+
+.container {
+  height: 100%; }
+
+.welcome {
+  height: 100%; }
+  .welcome .header {
+    height: 60px; }
+  .welcome a {
+    color: #fff; }
+  .welcome .innerWelcome {
+    height: 100%; }
+    .welcome .innerWelcome .signInContainer {
+      position: relative;
+      background-color: #67c7e2;
+      height: -webkit-calc(50% - 30px);
+      height: calc(50% - 30px); }
+      .welcome .innerWelcome .signInContainer .signInInner {
+        position: absolute;
+        left: -webkit-calc(50% - 150px);
+        bottom: 0px;
+        text-align: center;
+        border-radius: 300px 300px 0 0;
+        background-color: #ff8e8e;
+        height: 150px;
+        width: 300px; }
+        .welcome .innerWelcome .signInContainer .signInInner p {
+          position: absolute;
+          bottom: 30px;
+          left: 0px;
+          width: 300px; }
+    .welcome .innerWelcome .signUpContainer {
+      position: relative;
+      background-color: #ff8e8e;
+      height: -webkit-calc(50% - 30px);
+      height: calc(50% - 30px); }
+      .welcome .innerWelcome .signUpContainer .signUpInner {
+        position: absolute;
+        left: -webkit-calc(50% - 150px);
+        top: 0px;
+        text-align: center;
+        border-radius: 0 0 300px 300px;
+        background-color: #67c7e2;
+        height: 150px;
+        width: 300px; }
+        .welcome .innerWelcome .signUpContainer .signUpInner p {
+          position: absolute;
+          top: 30px;
+          left: 0px;
+          width: 300px; }

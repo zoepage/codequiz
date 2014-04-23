@@ -1,0 +1,26 @@
+{
+  "name": "codequiz",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zoepage/codequiz",
+  "authors": [
+    "Elmar Burke <hallo@elmarburke.de>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16",
+    "angular-route": "~1.2.16",
+    "bootstrap": "~3.1.1",
+    "angular-bootstrap": "~0.10.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.16",
+    "jquery": "~2.1.0"
+  }
+}

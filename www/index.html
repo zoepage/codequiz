@@ -1,139 +1,37 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html ng-app="codeQuiz">
 <head>
-
-	<!-- Basic Page Needs
-  ================================================== -->
-	<meta charset="utf-8">
-	<title>codeQuiz</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<!-- Mobile Specific Metas
-  ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS
-  ================================================== -->
-  	<link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/vendor/skeleton/base.css">
-	<link rel="stylesheet" href="assets/vendor/skeleton/skeleton.css">
-	<link rel="stylesheet" href="assets/vendor/skeleton/layout.css">
-
-
-
-	<link rel="stylesheet" href="assets/css/main.css">
-
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="assets/vendor/skeleton/images/favicon.ico">
-	<link rel="apple-touch-icon" href="assets/vendor/skeleton/images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="assets/vendor/skeleton/images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="assets/vendor/skeleton/images/apple-touch-icon-114x114.png">
-
+  <title>codeQuiz</title>
+  <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap-theme.css"/>
+  <link rel="stylesheet" href="styles/style.css"/>
 </head>
 <body>
 
+<main>
+  <div class="container" ng-view></div>
+</main>
 
 
-	<!-- Primary Page Layout
-	================================================== -->
+<!-- Vendor -->
+<script src="components/jquery/dist/jquery.js"></script>
+<script src="components/bootstrap/dist/js/bootstrap.js"></script>
 
-	<!-- Delete everything in this .container and get started on your own site! -->
+<script src="components/angular/angular.js"></script>
+<script src="components/angular-route/angular-route.js"></script>
+<script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 
-	<div class="container">
-		<div class="sixteen columns">
-			<!-- START hoodie-accountbar -->
-	        <div class="hoodie-accountbar">
+<script src="/_api/_files/hoodie.js"></script>
 
-	         <div class="hoodie-account-signedout">
-            <span class="btn-group">
-              <button class="btn" data-hoodie-action="signup">Sign Up</button>
-              <button class="btn dropdown-toggle" data-toggle="dropdown">
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu pull-right">
-                <li><a href="#" data-hoodie-action="signin">Sign In</a></li>
-                <li><a href="#" data-hoodie-action="resetpassword">Reset Password</a></li>
-                <li><a href="#" data-hoodie-action="destroy">Clear local data</a></li>
-              </ul>
-            </span>
-          </div><!-- /.hoodie-account-signedout -->
+<!-- App -->
+<script src="scripts/module.js"></script>
+<script src="scripts/config/routesConfig.js"></script>
+<script src="scripts/config/hoodieConfig.js"></script>
 
-	          <div class="hoodie-account-signedin">
-	            Hello,
-	            <span class="hoodie-username"><!-- usern name will be filled in here --></span>
-	            <span class="btn-group">
-	              <button class="btn" data-hoodie-action="signout">Sign Out</button>
-	              <button class="btn dropdown-toggle" data-toggle="dropdown">
-	                <span class="caret"></span>
-	              </button>
-	              <ul class="dropdown-menu pull-right">
-	                <li><a href="#" data-hoodie-action="changepassword">Change Password</a></li>
-	                <li><a href="#" data-hoodie-action="changeusername">Change Username</a></li>
-	                <li><a href="#" data-hoodie-action="destroy">Destroy Account</a></li>
-	              </ul>
-	            </span>
-	          </div><!-- /.hoodie-account-signedin -->
+<script src="scripts/run/runLogin.js"></script>
 
-	          <div class="hoodie-account-error">
-	            Hello,
-	            <span class="hoodie-username"><!-- usern name will be filled in here --></span>.
-	            <span class="btn-group">
-	              <button class="btn btn-danger" data-hoodie-action="signin">Authentication error: Sign in again</button>
-	              <button class="btn dropdown-toggle btn-danger" data-toggle="dropdown">
-	                <span class="caret"></span>
-	              </button>
-	              <ul class="dropdown-menu pull-right">
-	                <li><a href="#" data-hoodie-action="signout">Sign out</a></li>
-	              </ul>
-	            </span>
-	          </div><!-- /.hoodie-account-error -->
-	        </div>
-	<!-- END hoodie-accountbar -->
-		</div>
-		<div class="sixteen columns">
-			<h1>codeQuiz</h1>
-			<h2>Your hoodie in the pocket</h2>
-			<hr />
-		</div>
-		<div class="one-third column">
-			<h3>About Skeleton?</h3>
-			<p>Skeleton is a small collection of well-organized CSS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
-		</div>
-		<div class="one-third column">
-			<h3>Three Core Principles</h3>
-			<p>Skeleton is built on three core principles:</p>
-			<ul class="square">
-				<li><strong>A Responsive Grid Down To Mobile</strong>: Elegant scaling from a browser to tablets to mobile.</li>
-				<li><strong>Fast to Start</strong>: It's a tool for rapid development with best practices</li>
-				<li><strong>Style Agnostic</strong>: It provides the most basic, beautiful styles, but is meant to be overwritten.</li>
-			</ul>
-		</div>
-		<div class="one-third column">
-			<h3>Docs &amp; Support</h3>
-			<p>The easiest way to really get started with Skeleton is to check out the full docs and info at <a href="http://www.getskeleton.com">www.getskeleton.com.</a>. Skeleton is also open-source and has a <a href="https://github.com/dhgamache/skeleton">project on git</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:hi@getskeleton.com">hi@getskeleton.com</a>.</p>
-		</div>
+<script src="scripts/controllers/mainCtrl.js"></script>
+<script src="scripts/controllers/welcomeCtrl.js"></script>
 
-	</div><!-- container -->
-    <script src="assets/vendor/jquery-2.1.0.min.js"></script>
-    <script src="assets/vendor/bootstrap/bootstrap.js"></script>
-    <!-- Load the dynamic version of hoodie.js that includes all the plugin code-->
-    <script src="/_api/_files/hoodie.js"></script>
-
-    <script src="assets/vendor/hoodie.accountbar.bootstrap.js"></script>
-    <script src="assets/vendor/bootstrap.modalform.js"></script>
-    <script src="assets/js/main.js"></script>
-
-
-<!-- End Document
-================================================== -->
 </body>
 </html>

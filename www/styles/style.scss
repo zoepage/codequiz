@@ -1,0 +1,70 @@
+html, body, main {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
+$color1: #67C7E2;
+$color2: #FF8E8E;
+$circleSize: 300px;
+
+.welcome {
+  height: 100%;
+  .header {
+    height: 60px;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .innerWelcome {
+    height: 100%;
+    .signInContainer {
+      position: relative;
+      background-color: $color1;
+      height: -webkit-calc(50% - 30px);
+      height: calc(50% - 30px);
+      .signInInner {
+        position: absolute;
+        left: -webkit-calc(50% - 150px);
+        bottom: 0px;
+        text-align: center;
+        border-radius: $circleSize $circleSize 0 0;
+        background-color: $color2;
+        height: $circleSize/2;
+        width: $circleSize;
+        p {
+          position: absolute;
+          bottom: $circleSize/10;
+          left: 0px;
+          width: $circleSize;
+        }
+      }
+    }
+    .signUpContainer {
+      position: relative;
+      background-color: $color2;
+      height: -webkit-calc(50% - 30px);
+      height: calc(50% - 30px);
+      .signUpInner {
+        position: absolute;
+        left: -webkit-calc(50% - 150px);
+        top: 0px;
+        text-align: center;
+        border-radius: 0 0 $circleSize $circleSize;
+        background-color: $color1;
+        height: $circleSize/2;
+        width: $circleSize;
+        p {
+          position: absolute;
+          top: $circleSize/10;
+          left: 0px;
+          width: $circleSize;
+        }
+      }
+    }
+  }
+}
