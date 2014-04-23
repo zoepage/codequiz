@@ -17,7 +17,7 @@ angular.module('codeQuiz')
         templateUrl: 'views/SignInView.html'
       })
       .when('/signUp', {
-        //controller: 'SignUpCtrl',
+        controller: 'SignUpCtrl',
         templateUrl: 'views/SignUpView.html'
       })
       .otherwise({
