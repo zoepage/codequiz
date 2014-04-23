@@ -3,17 +3,17 @@
     <h2>Welcome to codeQuiz.</h2>
   </div>
   <div class="innerWelcome">
-    <div class="signInContainer">
+    <div class="signInContainer" ng-class="{clicked: signIn.clicked, otherClicked: signUp.clicked}">
       <div class="signInInner">
         <p>
-          <a href="/#/signIn">Sign In</a>
+          <a ng-click="signIn.clicked = true">Sign In</a>
         </p>
       </div>
     </div>
-    <div class="signUpContainer">
+    <div class="signUpContainer" ng-class="{clicked: signUp.clicked, otherClicked: signIn.clicked}">
       <div class="signUpInner">
         <p>
-          <a href="/#/signUp">Sign Up</a>
+          <a ng-click="signUp.clicked = true">Sign Up</a>
         </p>
       </div>
     </div>

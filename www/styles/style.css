@@ -25,12 +25,27 @@ html, body, main {
         border-radius: 300px 300px 0 0;
         background-color: #ff8e8e;
         height: 150px;
-        width: 300px; }
+        width: 300px;
+        -webkit-transform-origin: bottom; }
         .welcome .innerWelcome .signInContainer .signInInner p {
           position: absolute;
           bottom: 30px;
           left: 0px;
           width: 300px; }
+      .welcome .innerWelcome .signInContainer.clicked {
+        -webkit-animation: minSignInBox 6s;
+        height: 0px; }
+        .welcome .innerWelcome .signInContainer.clicked .signInInner {
+          -webkit-animation: rotateSignIn 3s;
+          -webkit-transform: rotateX(180deg);
+          z-index: 999; }
+          .welcome .innerWelcome .signInContainer.clicked .signInInner p {
+            -webkit-animation: rotateSignInText 3s;
+            -webkit-transform: rotateX(180deg); }
+      .welcome .innerWelcome .signInContainer.otherClicked {
+        -webkit-animation: maxSignInBox 6s;
+        height: -webkit-calc(100% - 30px);
+        height: calc(100% - 30px); }
     .welcome .innerWelcome .signUpContainer {
       position: relative;
       background-color: #ff8e8e;
@@ -44,9 +59,67 @@ html, body, main {
         border-radius: 0 0 300px 300px;
         background-color: #67c7e2;
         height: 150px;
-        width: 300px; }
+        width: 300px;
+        -webkit-transform-origin: top; }
         .welcome .innerWelcome .signUpContainer .signUpInner p {
           position: absolute;
           top: 30px;
           left: 0px;
           width: 300px; }
+      .welcome .innerWelcome .signUpContainer.clicked {
+        -webkit-animation: minSignInBox 6s;
+        height: 0px; }
+        .welcome .innerWelcome .signUpContainer.clicked .signUpInner {
+          -webkit-animation: rotateSignIn 3s;
+          -webkit-transform: rotateX(180deg);
+          z-index: 999; }
+          .welcome .innerWelcome .signUpContainer.clicked .signUpInner p {
+            -webkit-animation: rotateSignInText 3s;
+            -webkit-transform: rotateX(180deg); }
+      .welcome .innerWelcome .signUpContainer.otherClicked {
+        -webkit-animation: maxSignInBox 6s;
+        height: -webkit-calc(100% - 30px);
+        height: calc(100% - 30px); }
+
+@-webkit-keyframes rotateSignIn {
+  from {
+    -webkit-transform: rotateX(0deg);
+    z-index: 999; }
+
+  to {
+    -webkit-transform: rotateX(180deg);
+    z-index: 999; } }
+
+@-webkit-keyframes rotateSignInText {
+  from {
+    -webkit-transform: rotateX(0deg);
+    z-index: 999; }
+
+  to {
+    -webkit-transform: rotateX(180deg);
+    z-index: 999; } }
+
+@-webkit-keyframes minSignInBox {
+  from {
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px); }
+
+  50% {
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px); }
+
+  to {
+    height: 0px; } }
+
+@-webkit-keyframes maxSignInBox {
+  from {
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px); }
+
+  50% {
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px); }
+
+  to {
+    height: -webkit-calc(100% - 30px);
+    height: calc(100% - 30px); } }

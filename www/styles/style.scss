@@ -42,6 +42,27 @@ $circleSize: 300px;
           left: 0px;
           width: $circleSize;
         }
+
+        -webkit-transform-origin: bottom;
+      }
+
+      &.clicked {
+        -webkit-animation: minSignInBox 6s;
+        height: 0px;
+        .signInInner {
+          -webkit-animation: rotateSignIn 3s;
+          -webkit-transform: rotateX(180deg);
+          z-index: 999;
+          p {
+            -webkit-animation: rotateSignInText 3s;
+            -webkit-transform: rotateX(180deg);
+          }
+        }
+      }
+      &.otherClicked {
+        -webkit-animation: maxSignInBox 6s;
+        height: -webkit-calc(100% - 30px);
+        height: calc(100% - 30px);
       }
     }
     .signUpContainer {
@@ -64,7 +85,79 @@ $circleSize: 300px;
           left: 0px;
           width: $circleSize;
         }
+
+        -webkit-transform-origin: top;
+      }
+      &.clicked {
+        -webkit-animation: minSignInBox 6s;
+        height: 0px;
+
+        .signUpInner {
+          -webkit-animation: rotateSignIn 3s;
+          -webkit-transform: rotateX(180deg);
+          z-index: 999;
+          p {
+            -webkit-animation: rotateSignInText 3s;
+            -webkit-transform: rotateX(180deg);
+          }
+        }
+      }
+      &.otherClicked {
+        -webkit-animation: maxSignInBox 6s;
+        height: -webkit-calc(100% - 30px);
+        height: calc(100% - 30px);
       }
     }
+  }
+}
+
+@-webkit-keyframes rotateSignIn {
+  from {
+    -webkit-transform: rotateX(0deg);
+    z-index: 999;
+  }
+  to {
+    -webkit-transform: rotateX(180deg);
+    z-index: 999;
+  }
+}
+
+@-webkit-keyframes rotateSignInText {
+  from {
+    -webkit-transform: rotateX(0deg);
+    z-index: 999;
+  }
+  to {
+    -webkit-transform: rotateX(180deg);
+    z-index: 999;
+  }
+}
+
+@-webkit-keyframes minSignInBox {
+  from {
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px);
+  }
+  50% {
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px);
+  }
+  to {
+    height: 0px;
+  }
+}
+
+@-webkit-keyframes maxSignInBox {
+  from {
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px);
+  }
+  50% {
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px);
+  }
+  to {
+    height: -webkit-calc(100% - 30px);
+    height: calc(100% - 30px);
   }
 }
