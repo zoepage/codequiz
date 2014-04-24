@@ -2,12 +2,13 @@
 
 angular.module('codeQuiz')
   .controller('SignInCtrl', function ($scope, hoodieAccount, $location) {
-    $scope.signIn = function(user, pass) {
+    $scope.action = "Sign In";
+    $scope.actionFn = function (user, pass) {
       hoodieAccount.signIn(user, pass)
-        .then(function() {
+        .then(function () {
           $location.path('/game');
         }, function (error) {
-          $scope.signInForm.$error.message = error.message;
+          $scope.signForm.$error.message = error.message;
         });
     };
   });

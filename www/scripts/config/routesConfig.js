@@ -9,17 +9,16 @@ angular.module('codeQuiz')
       })
       .when('/welcome/signIn', {
         controller: 'SignInCtrl',
-        templateUrl: 'views/SignInView.html'
+        templateUrl: 'views/LoginForm.html'
       })
       .when('/welcome/signUp', {
         controller: 'SignUpCtrl',
-        templateUrl: 'views/SignUpView.html'
+        templateUrl: 'views/LoginForm.html'
       })
       .when('/game', {
         controller: 'MainCtrl',
         templateUrl: 'views/MainView.html'
       })
-
       .otherwise({
         redirectTo: '/'
       });
