@@ -1,10 +1,3 @@
-.container.ng-enter {
-  -webkit-transition: 0.5s linear all;
-  opacity: 0; }
-
-.container.ng-enter-active {
-  opacity: 1; }
-
 .welcome {
   height: 100%; }
   .welcome a {
