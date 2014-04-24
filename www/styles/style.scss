@@ -1,6 +1,6 @@
 $color1: #67C7E2;
 $color2: #FF8E8E;
-$routeChangeTime: 1;
+$routeChangeTime: 3;
 
 @import 'container.animation';
 @import 'welcome';
@@ -10,4 +10,6 @@ $routeChangeTime: 1;
 
 html, body, main, .container {
   height: 100%;
+  width: 100%;
+  padding: 0px;
 }

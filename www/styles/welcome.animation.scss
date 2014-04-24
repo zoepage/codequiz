@@ -12,11 +12,11 @@
     }
 
     .active {
-      -webkit-animation: minimize 1s;
+      -webkit-animation: minimize #{$routeChangeTime}s;
       height: 0px;
     }
     .inactive {
-      -webkit-animation: maximize 1s;
+      -webkit-animation: maximize #{$routeChangeTime}s;
       height: 0px;
     }
   }
