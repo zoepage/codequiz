@@ -2,20 +2,15 @@ $circleSize: 300px;
 
 .welcome {
   height: 100%;
-  .header {
-    height: 60px;
-  }
   a {
     color: #fff;
   }
   .innerWelcome {
-    margin-top: 60px;
     height: 100%;
-
     .welcomeContainer {
       position: relative;
-      height: -webkit-calc(50% - #{$circleSize/10});
-      height: calc(50% - #{$circleSize/10});
+      height: -webkit-calc(50%);
+      height: calc(50%);
       .inner {
         position: absolute;
         left: -webkit-calc(50% - #{$circleSize/2});

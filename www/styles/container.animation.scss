@@ -1,0 +1,8 @@
+.container.ng-enter {
+  -webkit-transition: #{$routeChangeTime}s linear all;
+  opacity: 0;
+}
+
+.container.ng-enter-active {
+  opacity: 1;
+}

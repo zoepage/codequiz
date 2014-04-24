@@ -1,16 +1,20 @@
+.container.ng-enter {
+  -webkit-transition: 1s linear all;
+  opacity: 0; }
+
+.container.ng-enter-active {
+  opacity: 1; }
+
 .welcome {
   height: 100%; }
-  .welcome .header {
-    height: 60px; }
   .welcome a {
     color: #fff; }
   .welcome .innerWelcome {
-    margin-top: 60px;
     height: 100%; }
     .welcome .innerWelcome .welcomeContainer {
       position: relative;
-      height: -webkit-calc(50% - 30px);
-      height: calc(50% - 30px); }
+      height: -webkit-calc(50%);
+      height: calc(50%); }
       .welcome .innerWelcome .welcomeContainer .inner {
         position: absolute;
         left: -webkit-calc(50% - 150px);
@@ -38,19 +42,19 @@
         background-color: #67c7e2;
         -webkit-transform-origin: top; }
 
-.container.ng-leave {
+.welcomeAnimation.ng-leave {
   -webkit-transition: 1s linear all; }
-  .container.ng-leave .active .inner {
+  .welcomeAnimation.ng-leave .welcome .active .inner {
     -webkit-animation: rotate180 0.5s;
     -webkit-transform: rotateX(180deg);
     z-index: 1; }
-    .container.ng-leave .active .inner p {
+    .welcomeAnimation.ng-leave .welcome .active .inner p {
       -webkit-animation: rotate180 0.5s;
       -webkit-transform: rotateX(180deg); }
-  .container.ng-leave .active {
+  .welcomeAnimation.ng-leave .welcome .active {
     -webkit-animation: minimize 1s;
     height: 0px; }
-  .container.ng-leave .inactive {
+  .welcomeAnimation.ng-leave .welcome .inactive {
     -webkit-animation: maximize 1s;
     height: 0px; }
 
@@ -63,28 +67,28 @@
 
 @-webkit-keyframes minimize {
   from {
-    height: -webkit-calc(50% - 30px);
-    height: calc(50% - 30px); }
+    height: -webkit-calc(50%);
+    height: calc(50%); }
 
   50% {
-    height: -webkit-calc(50% - 30px);
-    height: calc(50% - 30px); }
+    height: -webkit-calc(50%);
+    height: calc(50%); }
 
   to {
     height: 0px; } }
 
 @-webkit-keyframes maximize {
   from {
-    height: -webkit-calc(50% - 30px);
-    height: calc(50% - 30px); }
+    height: -webkit-calc(50%);
+    height: calc(50%); }
 
   50% {
-    height: -webkit-calc(50% - 30px);
-    height: calc(50% - 30px); }
+    height: -webkit-calc(50%);
+    height: calc(50%); }
 
   to {
-    height: -webkit-calc(100% - 30px);
-    height: calc(100% - 30px); } }
+    height: -webkit-calc(100%);
+    height: calc(100%); } }
 
 .signInPageContainer {
   background-color: #ff8e8e;

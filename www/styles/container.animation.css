@@ -1,0 +1,6 @@
+.container.ng-enter {
+  -webkit-transition: 1s linear all;
+  opacity: 0; }
+
+.container.ng-enter-active {
+  opacity: 1; }

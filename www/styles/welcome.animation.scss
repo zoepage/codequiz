@@ -1,23 +1,24 @@
-$welcomeAnimationTimeInSec: 1;
-.container.ng-leave {
-  -webkit-transition: #{$welcomeAnimationTimeInSec}s linear all;
-  .active .inner {
-    -webkit-animation: rotate180 #{$welcomeAnimationTimeInSec/2}s;
-    -webkit-transform: rotateX(180deg);
-    z-index: 1;
-    p {
-      -webkit-animation: rotate180 #{$welcomeAnimationTimeInSec/2}s;
+.welcomeAnimation.ng-leave {
+  -webkit-transition: #{$routeChangeTime}s linear all;
+  .welcome{
+    .active .inner {
+      -webkit-animation: rotate180 #{$routeChangeTime/2}s;
       -webkit-transform: rotateX(180deg);
+      z-index: 1;
+      p {
+        -webkit-animation: rotate180 #{$routeChangeTime/2}s;
+        -webkit-transform: rotateX(180deg);
+      }
     }
-  }
 
-  .active {
-    -webkit-animation: minimize 1s;
-    height: 0px;
-  }
-  .inactive {
-    -webkit-animation: maximize 1s;
-    height: 0px;
+    .active {
+      -webkit-animation: minimize 1s;
+      height: 0px;
+    }
+    .inactive {
+      -webkit-animation: maximize 1s;
+      height: 0px;
+    }
   }
 }
 
@@ -32,12 +33,12 @@ $welcomeAnimationTimeInSec: 1;
 
 @-webkit-keyframes minimize {
   from {
-    height: -webkit-calc(50% - 30px);
-    height: calc(50% - 30px);
+    height: -webkit-calc(50%);
+    height: calc(50%);
   }
   50% {
-    height: -webkit-calc(50% - 30px);
-    height: calc(50% - 30px);
+    height: -webkit-calc(50%);
+    height: calc(50%);
   }
   to {
     height: 0px;
@@ -46,15 +47,15 @@ $welcomeAnimationTimeInSec: 1;
 
 @-webkit-keyframes maximize {
   from {
-    height: -webkit-calc(50% - 30px);
-    height: calc(50% - 30px);
+    height: -webkit-calc(50%);
+    height: calc(50%);
   }
   50% {
-    height: -webkit-calc(50% - 30px);
-    height: calc(50% - 30px);
+    height: -webkit-calc(50%);
+    height: calc(50%);
   }
   to {
-    height: -webkit-calc(100% - 30px);
-    height: calc(100% - 30px);
+    height: -webkit-calc(100%);
+    height: calc(100%);
   }
 }

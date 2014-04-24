@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="codeQuiz">
+<html ng-app="codeQuiz" ng-controller="SpecialAnimationCtrl">
 <head>
   <title>codeQuiz</title>
   <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css"/>
@@ -9,7 +9,7 @@
 <body>
 
 <main>
-  <div class="container" ng-view></div>
+  <div class="container {{additionalClass}}" ng-view></div>
 </main>
 
 
@@ -27,14 +27,13 @@
 <!-- App -->
 <script src="scripts/module.js"></script>
 <script src="scripts/config/routesConfig.js"></script>
-<script src="scripts/config/hoodieConfig.js"></script>
 
 <script src="scripts/run/runLogin.js"></script>
 
 <script src="scripts/controllers/mainCtrl.js"></script>
-<script src="scripts/controllers/welcomeCtrl.js"></script>
 <script src="scripts/controllers/signInCtrl.js"></script>
 <script src="scripts/controllers/signUpCtrl.js"></script>
+<script src="scripts/controllers/specialAnimationCtrl.js"></script>
 
 </body>
 </html>

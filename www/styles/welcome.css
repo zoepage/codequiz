@@ -11,7 +11,6 @@ html, body, main {
   .welcome a {
     color: #fff; }
   .welcome .innerWelcome {
-    margin-top: 60px;
     height: 100%; }
     .welcome .innerWelcome .signInContainer {
       position: relative;
