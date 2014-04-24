@@ -132,6 +132,15 @@
   background-color: #67c7e2;
   height: 100%; }
 
+form input.ng-invalid.ng-dirty {
+  background-color: #ffcbc1; }
+
+form input.ng-invalid:focus {
+  outline-color: red; }
+
+form input.ng-valid.ng-dirty {
+  background-color: #1dca07; }
+
 html, body, main, .container {
   height: 100%;
   width: 100%;

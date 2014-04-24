@@ -1,20 +1,38 @@
 <div class="signInPageContainer">
-  <div class="row">
-    <div class="col-sm-12">
-      <h2>Sign In</h2>
-    </div>
+  <div class="row form-signin">
+    <h2>Sign In</h2>
+
     <form role="form"
-          ng-submit="signIn(email, password)">
+          name="signInForm"
+          novalidate>
       <div class="form-group col-sm-12">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required ng-model="email">
+        <input type="text"
+               class="form-control"
+               placeholder="Enter email"
+               required
+               ng-model="email">
+        <span ng-show="signInForm.$error.email">Please enter a correct email</span>
+        <span ng-show="signInForm.$error.message">{{signInForm.$error.message}}</span>
       </div>
       <div class="form-group col-sm-12">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required ng-model="password">
+        <input type="password"
+               class="form-control"
+               placeholder="Password"
+               required
+               ng-model="password">
       </div>
       <div class="form-group col-sm-12">
-        <button type="submit" class="btn btn-default btn-block">Submit</button>
+        <button
+                ng-click="signIn(email, password)"
+                type="submit"
+                class="btn btn-default btn-block">
+          Submit
+        </button>
+      </div>
+      <div class="form-group col-sm-12">
+        <a ng-href="#/">
+          <button class="btn btn-default btn-block" ng-href="#/">Back</button>
+        </a>
       </div>
     </form>
   </div>
