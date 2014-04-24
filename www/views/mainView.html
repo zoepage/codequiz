@@ -1,5 +1,16 @@
-<h1>CodeQuiz!!!</h1>
-<h2>Where Angular meets Hoodie</h2>
-<h2>Welcome {{ account.username }}!!!</h2>
+<div class="form-signin">
+  <h2>Welcome {{ account.username }}!!!</h2>
+  <button class="btn btn-danger" ng-click="account.signOut()">Log out</button>
 
-<button class="btn btn-danger" ng-click="account.signOut()">Log out</button>
+
+  <h2>
+    Description
+  </h2>
+
+  <p>
+    Just a few simple tasks for JavaScript Type Coercion.
+    Just Answer with <em>true</em> or <em>false</em>.
+  </p>
+
+  <a href="#/game/1" class="btn btn-info">Start</a>
+</div>

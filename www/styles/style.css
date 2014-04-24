@@ -137,4 +137,5 @@ form input.ng-valid.ng-dirty {
 html, body, main, .container {
   height: 100%;
   width: 100%;
-  padding: 0px; }
+  padding: 0px;
+  background-color: #67c7e2; }

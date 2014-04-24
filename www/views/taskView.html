@@ -1,27 +1,26 @@
 <div class="form-signin">
+  <p>
+    Task
+    <span class="taskId" ng-bind="taskId"></span>
+    of
+    <span class="sumTasks" ng-bind="sumTasks"></span>
+  </p>
 
-
-<button class="btn btn-danger" ng-click="account.signOut()">Log out</button>
-
-<p>
-  Task
-  <span class="taskId" ng-bind="taskId"></span>
-  of
-  <span class="sumTasks" ng-bind="sumTasks"></span>
-</p>
-
-<div class="progress">
-  <div class="progress-bar no-transition" role="progressbar" style="width: {{(taskId / sumTasks)*100}}%;">
+  <div class="progress">
+    <div class="progress-bar no-transition" role="progressbar" style="width: {{(taskId / sumTasks)*100}}%;">
+    </div>
   </div>
+
+  <hr>
+
+  <section>
+    <button class="btn btn-success" value="true" ng-click="saveResult('true')">True</button>
+    <button class="btn btn-danger" value="false" ng-click="saveResult('false')">False</button>
+  </section>
+
+  <pre class="prettyprint linenums lang-js" ng-bind="task"></pre>
+  <a href="#/">
+    <button class="btn btn-danger">Cancel Test</button>
+  </a>
 </div>
 
-<hr>
-
-<section>
-  <button class="btn btn-success" value="true" ng-click="saveResult('true')">True</button>
-  <button class="btn btn-danger" value="false" ng-click="saveResult('false')">False</button>
-</section>
-
-<pre class="prettyprint linenums lang-js" ng-bind="task"></pre>
-
-</div>
