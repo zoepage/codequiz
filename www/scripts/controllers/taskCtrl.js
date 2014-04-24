@@ -1,5 +1,5 @@
 angular.module("codeQuiz")
-    .controller("taskCtrl", function ($scope, $routeParams, $location, $timeout, DataHolderService) {
+    .controller("TaskCtrl", function ($scope, $routeParams, $location, $timeout, DataHolderService) {
         'use strict';
         var tasks = DataHolderService.getTasks();
         $scope.taskId = parseInt($routeParams.taskId, 10);
@@ -12,7 +12,7 @@ angular.module("codeQuiz")
             if ($scope.taskId < $scope.sumTasks) {
                 $location.path("/game/" + ($scope.taskId + 1));
             } else {
-                $location.path("/summary");
+                $location.path("/game/summary");
             }
 
         };

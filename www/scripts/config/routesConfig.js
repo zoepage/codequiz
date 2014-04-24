@@ -19,9 +19,13 @@ angular.module('codeQuiz')
         controller: 'MainCtrl',
         templateUrl: 'views/MainView.html'
       })
+      .when("/game/summary", {
+        templateUrl: "views/summaryView.html",
+        controller: "SummaryCtrl"
+      })
       .when("/game/:taskId", {
         templateUrl: "views/taskView.html",
-        controller: "taskCtrl"
+        controller: "TaskCtrl"
       })
       .otherwise({
         redirectTo: '/'
