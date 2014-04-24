@@ -3,17 +3,12 @@
     <h2>Welcome to codeQuiz.</h2>
   </div>
   <div class="innerWelcome">
-    <div class="signInContainer" ng-class="{clicked: signIn.clicked, otherClicked: signUp.clicked}">
-      <div class="signInInner">
+    <div ng-repeat="container in ['signIn','signUp']"
+         class="{{container}}Container welcomeContainer"
+         ng-class="{active: route==$index, inactive: route!=$index}">
+      <div class="{{container}}Inner inner">
         <p>
-          <a ng-click="signIn.clicked = true">Sign In</a>
-        </p>
-      </div>
-    </div>
-    <div class="signUpContainer" ng-class="{clicked: signUp.clicked, otherClicked: signIn.clicked}">
-      <div class="signUpInner">
-        <p>
-          <a ng-click="signUp.clicked = true">Sign Up</a>
+          <a ng-href="#/{{container}}" ng-click="route=$index">{{container}}</a>
         </p>
       </div>
     </div>

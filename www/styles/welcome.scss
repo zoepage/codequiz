@@ -1,11 +1,3 @@
-html, body, main {
-  height: 100%;
-}
-
-.container {
-  height: 100%;
-}
-
 $circleSize: 300px;
 
 .welcome {
@@ -13,150 +5,50 @@ $circleSize: 300px;
   .header {
     height: 60px;
   }
-
   a {
     color: #fff;
   }
-
   .innerWelcome {
     margin-top: 60px;
     height: 100%;
-    .signInContainer {
+
+    .welcomeContainer {
       position: relative;
-      background-color: $color1;
-      height: -webkit-calc(50% - 30px);
-      height: calc(50% - 30px);
-      .signInInner {
+      height: -webkit-calc(50% - #{$circleSize/10});
+      height: calc(50% - #{$circleSize/10});
+      .inner {
         position: absolute;
-        left: -webkit-calc(50% - 150px);
-        bottom: 0px;
+        left: -webkit-calc(50% - #{$circleSize/2});
         text-align: center;
         border-radius: $circleSize $circleSize 0 0;
-        background-color: $color2;
         height: $circleSize/2;
         width: $circleSize;
-        p {
-          position: absolute;
-          bottom: $circleSize/10;
-          left: 0px;
-          width: $circleSize;
-        }
+      }
+      p {
+        position: absolute;
+        top: $circleSize/10;
+        left: 0px;
+        width: $circleSize;
+      }
+    }
 
+    .signInContainer {
+      background-color: $color1;
+      .signInInner {
+        bottom: 0px;
+        border-radius: $circleSize $circleSize 0 0;
+        background-color: $color2;
         -webkit-transform-origin: bottom;
-      }
-
-      &.clicked {
-        -webkit-animation: minSignInBox 6s;
-        height: 0px;
-        .signInInner {
-          -webkit-animation: rotateSignIn 3s;
-          -webkit-transform: rotateX(180deg);
-          z-index: 999;
-          p {
-            -webkit-animation: rotateSignInText 3s;
-            -webkit-transform: rotateX(180deg);
-          }
-        }
-      }
-      &.otherClicked {
-        -webkit-animation: maxSignInBox 6s;
-        height: -webkit-calc(100% - 30px);
-        height: calc(100% - 30px);
       }
     }
     .signUpContainer {
-      position: relative;
       background-color: $color2;
-      height: -webkit-calc(50% - 30px);
-      height: calc(50% - 30px);
       .signUpInner {
-        position: absolute;
-        left: -webkit-calc(50% - 150px);
         top: 0px;
-        text-align: center;
         border-radius: 0 0 $circleSize $circleSize;
         background-color: $color1;
-        height: $circleSize/2;
-        width: $circleSize;
-        p {
-          position: absolute;
-          top: $circleSize/10;
-          left: 0px;
-          width: $circleSize;
-        }
-
         -webkit-transform-origin: top;
       }
-      &.clicked {
-        -webkit-animation: minSignInBox 6s;
-        height: 0px;
-
-        .signUpInner {
-          -webkit-animation: rotateSignIn 3s;
-          -webkit-transform: rotateX(180deg);
-          z-index: 999;
-          p {
-            -webkit-animation: rotateSignInText 3s;
-            -webkit-transform: rotateX(180deg);
-          }
-        }
-      }
-      &.otherClicked {
-        -webkit-animation: maxSignInBox 6s;
-        height: -webkit-calc(100% - 30px);
-        height: calc(100% - 30px);
-      }
     }
-  }
-}
-
-@-webkit-keyframes rotateSignIn {
-  from {
-    -webkit-transform: rotateX(0deg);
-    z-index: 999;
-  }
-  to {
-    -webkit-transform: rotateX(180deg);
-    z-index: 999;
-  }
-}
-
-@-webkit-keyframes rotateSignInText {
-  from {
-    -webkit-transform: rotateX(0deg);
-    z-index: 999;
-  }
-  to {
-    -webkit-transform: rotateX(180deg);
-    z-index: 999;
-  }
-}
-
-@-webkit-keyframes minSignInBox {
-  from {
-    height: -webkit-calc(50% - 30px);
-    height: calc(50% - 30px);
-  }
-  50% {
-    height: -webkit-calc(50% - 30px);
-    height: calc(50% - 30px);
-  }
-  to {
-    height: 0px;
-  }
-}
-
-@-webkit-keyframes maxSignInBox {
-  from {
-    height: -webkit-calc(50% - 30px);
-    height: calc(50% - 30px);
-  }
-  50% {
-    height: -webkit-calc(50% - 30px);
-    height: calc(50% - 30px);
-  }
-  to {
-    height: -webkit-calc(100% - 30px);
-    height: calc(100% - 30px);
   }
 }

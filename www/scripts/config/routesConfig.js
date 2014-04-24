@@ -9,7 +9,6 @@ angular.module('codeQuiz')
         templateUrl: 'views/MainView.html'
       })
       .when('/welcome', {
-        controller: 'WelcomeCtrl',
         templateUrl: 'views/WelcomeView.html'
       })
       .when('/signIn', {

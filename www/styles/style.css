@@ -1,9 +1,3 @@
-html, body, main {
-  height: 100%; }
-
-.container {
-  height: 100%; }
-
 .welcome {
   height: 100%; }
   .welcome .header {
@@ -13,94 +7,61 @@ html, body, main {
   .welcome .innerWelcome {
     margin-top: 60px;
     height: 100%; }
-    .welcome .innerWelcome .signInContainer {
+    .welcome .innerWelcome .welcomeContainer {
       position: relative;
-      background-color: #67c7e2;
       height: -webkit-calc(50% - 30px);
       height: calc(50% - 30px); }
-      .welcome .innerWelcome .signInContainer .signInInner {
+      .welcome .innerWelcome .welcomeContainer .inner {
         position: absolute;
         left: -webkit-calc(50% - 150px);
-        bottom: 0px;
         text-align: center;
         border-radius: 300px 300px 0 0;
-        background-color: #ff8e8e;
         height: 150px;
-        width: 300px;
-        -webkit-transform-origin: bottom; }
-        .welcome .innerWelcome .signInContainer .signInInner p {
-          position: absolute;
-          bottom: 30px;
-          left: 0px;
-          width: 300px; }
-      .welcome .innerWelcome .signInContainer.clicked {
-        -webkit-animation: minSignInBox 6s;
-        height: 0px; }
-        .welcome .innerWelcome .signInContainer.clicked .signInInner {
-          -webkit-animation: rotateSignIn 3s;
-          -webkit-transform: rotateX(180deg);
-          z-index: 999; }
-          .welcome .innerWelcome .signInContainer.clicked .signInInner p {
-            -webkit-animation: rotateSignInText 3s;
-            -webkit-transform: rotateX(180deg); }
-      .welcome .innerWelcome .signInContainer.otherClicked {
-        -webkit-animation: maxSignInBox 6s;
-        height: -webkit-calc(100% - 30px);
-        height: calc(100% - 30px); }
-    .welcome .innerWelcome .signUpContainer {
-      position: relative;
-      background-color: #ff8e8e;
-      height: -webkit-calc(50% - 30px);
-      height: calc(50% - 30px); }
-      .welcome .innerWelcome .signUpContainer .signUpInner {
+        width: 300px; }
+      .welcome .innerWelcome .welcomeContainer p {
         position: absolute;
-        left: -webkit-calc(50% - 150px);
+        top: 30px;
+        left: 0px;
+        width: 300px; }
+    .welcome .innerWelcome .signInContainer {
+      background-color: #67c7e2; }
+      .welcome .innerWelcome .signInContainer .signInInner {
+        bottom: 0px;
+        border-radius: 300px 300px 0 0;
+        background-color: #ff8e8e;
+        -webkit-transform-origin: bottom; }
+    .welcome .innerWelcome .signUpContainer {
+      background-color: #ff8e8e; }
+      .welcome .innerWelcome .signUpContainer .signUpInner {
         top: 0px;
-        text-align: center;
         border-radius: 0 0 300px 300px;
         background-color: #67c7e2;
-        height: 150px;
-        width: 300px;
         -webkit-transform-origin: top; }
-        .welcome .innerWelcome .signUpContainer .signUpInner p {
-          position: absolute;
-          top: 30px;
-          left: 0px;
-          width: 300px; }
-      .welcome .innerWelcome .signUpContainer.clicked {
-        -webkit-animation: minSignInBox 6s;
-        height: 0px; }
-        .welcome .innerWelcome .signUpContainer.clicked .signUpInner {
-          -webkit-animation: rotateSignIn 3s;
-          -webkit-transform: rotateX(180deg);
-          z-index: 999; }
-          .welcome .innerWelcome .signUpContainer.clicked .signUpInner p {
-            -webkit-animation: rotateSignInText 3s;
-            -webkit-transform: rotateX(180deg); }
-      .welcome .innerWelcome .signUpContainer.otherClicked {
-        -webkit-animation: maxSignInBox 6s;
-        height: -webkit-calc(100% - 30px);
-        height: calc(100% - 30px); }
 
-@-webkit-keyframes rotateSignIn {
+.container.ng-leave {
+  -webkit-transition: 1s linear all; }
+  .container.ng-leave .active .inner {
+    -webkit-animation: rotate180 0.5s;
+    -webkit-transform: rotateX(180deg);
+    z-index: 1; }
+    .container.ng-leave .active .inner p {
+      -webkit-animation: rotate180 0.5s;
+      -webkit-transform: rotateX(180deg); }
+  .container.ng-leave .active {
+    -webkit-animation: minimize 1s;
+    height: 0px; }
+  .container.ng-leave .inactive {
+    -webkit-animation: maximize 1s;
+    height: 0px; }
+
+@-webkit-keyframes rotate180 {
   from {
-    -webkit-transform: rotateX(0deg);
-    z-index: 999; }
+    -webkit-transform: rotateX(0deg); }
 
   to {
-    -webkit-transform: rotateX(180deg);
-    z-index: 999; } }
+    -webkit-transform: rotateX(180deg); } }
 
-@-webkit-keyframes rotateSignInText {
-  from {
-    -webkit-transform: rotateX(0deg);
-    z-index: 999; }
-
-  to {
-    -webkit-transform: rotateX(180deg);
-    z-index: 999; } }
-
-@-webkit-keyframes minSignInBox {
+@-webkit-keyframes minimize {
   from {
     height: -webkit-calc(50% - 30px);
     height: calc(50% - 30px); }
@@ -112,7 +73,7 @@ html, body, main {
   to {
     height: 0px; } }
 
-@-webkit-keyframes maxSignInBox {
+@-webkit-keyframes maximize {
   from {
     height: -webkit-calc(50% - 30px);
     height: calc(50% - 30px); }
@@ -131,4 +92,7 @@ html, body, main {
 
 .signUpPageContainer {
   background-color: #67c7e2;
+  height: 100%; }
+
+html, body, main, .container {
   height: 100%; }

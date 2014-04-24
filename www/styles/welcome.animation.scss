@@ -1,0 +1,60 @@
+$welcomeAnimationTimeInSec: 1;
+.container.ng-leave {
+  -webkit-transition: #{$welcomeAnimationTimeInSec}s linear all;
+  .active .inner {
+    -webkit-animation: rotate180 #{$welcomeAnimationTimeInSec/2}s;
+    -webkit-transform: rotateX(180deg);
+    z-index: 1;
+    p {
+      -webkit-animation: rotate180 #{$welcomeAnimationTimeInSec/2}s;
+      -webkit-transform: rotateX(180deg);
+    }
+  }
+
+  .active {
+    -webkit-animation: minimize 1s;
+    height: 0px;
+  }
+  .inactive {
+    -webkit-animation: maximize 1s;
+    height: 0px;
+  }
+}
+
+@-webkit-keyframes rotate180 {
+  from {
+    -webkit-transform: rotateX(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(180deg);
+  }
+}
+
+@-webkit-keyframes minimize {
+  from {
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px);
+  }
+  50% {
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px);
+  }
+  to {
+    height: 0px;
+  }
+}
+
+@-webkit-keyframes maximize {
+  from {
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px);
+  }
+  50% {
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px);
+  }
+  to {
+    height: -webkit-calc(100% - 30px);
+    height: calc(100% - 30px);
+  }
+}

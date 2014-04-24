@@ -2,5 +2,10 @@ $color1: #67C7E2;
 $color2: #FF8E8E;
 
 @import 'welcome';
+@import 'welcome.animation';
 @import 'signIn';
 @import 'signUp';
+
+html, body, main, .container {
+  height: 100%;
+}
