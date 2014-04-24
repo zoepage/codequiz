@@ -6,7 +6,7 @@ angular.module('codeQuiz')
       hoodieAccount.signIn(user, pass)
         .then(function(username) {
           console.log(username);
-          $location.path('/');
+          $location.path('/game');
         });
     };
   });

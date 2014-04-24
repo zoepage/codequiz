@@ -5,20 +5,21 @@ angular.module('codeQuiz')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        controller: 'MainCtrl',
-        templateUrl: 'views/MainView.html'
-      })
-      .when('/welcome', {
         templateUrl: 'views/WelcomeView.html'
       })
-      .when('/signIn', {
+      .when('/welcome/signIn', {
         controller: 'SignInCtrl',
         templateUrl: 'views/SignInView.html'
       })
-      .when('/signUp', {
+      .when('/welcome/signUp', {
         controller: 'SignUpCtrl',
         templateUrl: 'views/SignUpView.html'
       })
+      .when('/game', {
+        controller: 'MainCtrl',
+        templateUrl: 'views/MainView.html'
+      })
+
       .otherwise({
         redirectTo: '/'
       });
