@@ -9,11 +9,11 @@ angular.module('codeQuiz')
       })
       .when('/welcome/signIn', {
         controller: 'SignInCtrl',
-        templateUrl: 'views/LoginForm.html'
+        templateUrl: 'views/loginForm.html'
       })
       .when('/welcome/signUp', {
         controller: 'SignUpCtrl',
-        templateUrl: 'views/LoginForm.html'
+        templateUrl: 'views/loginForm.html'
       })
       .when('/game', {
         controller: 'MainCtrl',
