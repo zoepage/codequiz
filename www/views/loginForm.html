@@ -1,4 +1,4 @@
-<div class="{{class}}PageContainer" animation="signAnimation">
+<div class="{{action}}PageContainer" animation="signAnimation">
   <div class="row form-signin">
     <h2>{{action}}</h2>
 
@@ -8,7 +8,7 @@
       <div class="form-group col-sm-12">
         <input type="text"
                class="form-control"
-               placeholder="Enter email"
+               placeholder="enter (gravatar-)email"
                required
                ng-model="email">
         <span ng-show="signForm.$error.email">Please enter a correct email</span>
@@ -17,7 +17,7 @@
       <div class="form-group col-sm-12">
         <input type="password"
                class="form-control"
-               placeholder="Password"
+               placeholder="enter password"
                required
                ng-model="password">
       </div>

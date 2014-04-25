@@ -9,9 +9,14 @@ main > div {
   bottom: 0;
   left: 0;
   right: 0;
-  position: absolute;
-  background-color: #ff8e8e;
-  padding-top: 30px; }
+  background-color: #67c7e2;
+  position: absolute; }
+  main > div .form-signin {
+    padding-top: 60px; }
+
+.defaultPageContainer {
+  background-color: #67c7e2;
+  height: 100%; }
 
 main > h1 {
   z-index: 10;

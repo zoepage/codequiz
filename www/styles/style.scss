@@ -14,10 +14,19 @@ main > div {
   bottom: 0;
   left: 0;
   right: 0;
+  background-color: $color1;
   position: absolute;
-  background-color: $color2;
-  padding-top: 30px;
+  .form-signin {
+    padding-top: 60px;
+  }
 }
+
+.defaultPageContainer {
+  background-color: $color1;
+  height: 100%;
+}
+
+
 
 main > h1 {
   z-index: 10;

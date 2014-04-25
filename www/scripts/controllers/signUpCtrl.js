@@ -1,16 +1,12 @@
 'use strict';
 
 angular.module('codeQuiz')
-  .controller('SignUpCtrl', function ($scope, hoodieAccount, $location) {
-    $scope.action = "Sign Up";
-    $scope.class = "signUp";
-    $scope.animationOptions.backgroundClass = 'signUp';
+  .controller('SignUpCtrl', function ($scope) {
+    $scope.animationOptions.backgroundClass = $scope.action = "signUp";
     $scope.actionFn = function (user, pass) {
-      hoodieAccount.signUp(user, pass)
-        .then(function () {
-          $location.path('/game');
-        }, function (error) {
-          $scope.signForm.$error.message = error.message;
-        });
-    };
+      $scope.userAction.signUp(user, pass)
+        .then(undefined, function (hoodieError) {
+          $scope.signForm.$error.message = hoodieError.message;
+        })
+    }
   });
