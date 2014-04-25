@@ -1,22 +1,22 @@
 angular.module("codeQuiz")
-    .controller("TaskCtrl", function ($scope, $routeParams, $location, $timeout, DataHolderService) {
-        'use strict';
-        var tasks = DataHolderService.getTasks();
-        $scope.taskId = parseInt($routeParams.taskId, 10);
-        $scope.task = tasks[$scope.taskId - 1];
-        $scope.sumTasks = 10;//tasks.length;
+  .controller("TaskCtrl", function ($scope, $routeParams, $location, $timeout, GameInstanceService) {
+    'use strict';
+    var tasks = GameInstanceService.getGame($routeParams.category);
+    $scope.taskId = parseInt($routeParams.taskId, 10);
+    $scope.task = tasks[$scope.taskId - 1];
+    $scope.sumTasks = tasks.length;
 
-        $scope.saveResult = function (result) {
-            var results = DataHolderService.getResults();
-            results[$scope.taskId - 1] = result;
-            if ($scope.taskId < $scope.sumTasks) {
-                $location.path("/game/" + ($scope.taskId + 1));
-            } else {
-                $location.path("/game/summary");
-            }
+    $scope.saveResult = function (result) {
+      var results = GameInstanceService.getResults();
+      results[$scope.taskId - 1] = result;
+      if ($scope.taskId < $scope.sumTasks) {
+        $location.path("/game/" + $routeParams.category + "/" + ($scope.taskId + 1));
+      } else {
+        $location.path("/game/" + $routeParams.category + "/summary");
+      }
 
-        };
+    };
 
-        $timeout(prettyPrint, 0);
+    $timeout(prettyPrint, 0);
 
-    });
+  });

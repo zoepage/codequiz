@@ -19,11 +19,15 @@ angular.module('codeQuiz')
         controller: 'MainCtrl',
         templateUrl: 'views/mainView.html'
       })
-      .when("/game/summary", {
+      .when("/game/:category/summary", {
         templateUrl: "views/summaryView.html",
         controller: "SummaryCtrl"
       })
-      .when("/game/:taskId", {
+      .when("/game/:category/", {
+        templateUrl: "views/categoryDescriptionView.html",
+        controller: "CategoryDescriptionCtrl"
+      })
+      .when("/game/:category/:taskId", {
         templateUrl: "views/taskView.html",
         controller: "TaskCtrl"
       })

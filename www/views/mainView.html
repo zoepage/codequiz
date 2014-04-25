@@ -1,16 +1,14 @@
 <div class="form-signin">
   <h2>Welcome {{ account.username }}!!!</h2>
-  <p>You can go to <a href="#/account" class="btn btn-default btn-sm" role="button">your account</a> for logging out.</p>
 
-
-  <h2>
-    Description
-  </h2>
-
-  <p>
-    Just a few simple tasks for JavaScript Type Coercion.
-    Just Answer with <em>true</em> or <em>false</em>.
+  <p>You can go to <a href="#/account" class="btn btn-default btn-sm" role="button">your account</a> for logging out.
   </p>
 
-  <a href="#/game/1" class="btn btn-info">Start</a>
+
+  <ul>
+    <li ng-repeat="category in categories">
+      <a href="#/game/{{category}}/">{{category}}</a>
+    </li>
+  </ul>
+
 </div>
