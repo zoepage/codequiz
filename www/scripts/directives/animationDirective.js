@@ -1,11 +1,11 @@
 "use strict";
 
 angular.module('codeQuiz')
-  .directive('welcomeAnimation', function () {
+  .directive('animation', function () {
     return {
-      link: function (scope) {
+      link: function (scope,elem,attrs) {
         var animationClass = scope.animationOptions.animationClass;
-        scope.animationOptions.animationClass = 'welcomeAnimation'
+        scope.animationOptions.animationClass = attrs.animation;
 
         scope.$on('$destroy', function () {
           scope.animationOptions.animationClass = animationClass;
