@@ -21,7 +21,8 @@
     "angular-bootstrap": "~0.10.0",
     "angular-animate": "~1.2.16",
     "angular-touch": "~1.2.16",
-    "google-code-prettify": "~1.0.1"
+    "google-code-prettify": "~1.0.1",
+    "angular-gravatar": "~0.1.4"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.16"

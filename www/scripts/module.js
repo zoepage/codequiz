@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('codeQuiz', ['ngRoute', 'ngAnimate', 'ngTouch', 'hoodie', 'ui.bootstrap']);
+angular.module('codeQuiz', ['ngRoute', 'ngAnimate', 'ngTouch', 'hoodie', 'ui.bootstrap', 'ui.gravatar']);
