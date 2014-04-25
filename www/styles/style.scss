@@ -2,9 +2,7 @@ $color1: #67C7E2;
 $color2: #FF8E8E;
 $routeChangeTime: 2;
 
-
-
-html, body{
+html, body {
   height: 100%;
   width: 100%;
   padding: 0px;
@@ -12,17 +10,33 @@ html, body{
 
 main > div {
   height: 100%;
-  top:0;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   position: absolute;
   background-color: $color2;
+  padding-top: 30px;
 }
 
-@import "sign.animation";
+main > h1 {
+  z-index: 10;
+  position: relative;
+  margin: 0 auto;
+  width: 190px;
+  a{
+    color: black;
+  }
+  a:hover{
+    color: black;
+    text-decoration: none;
+  }
+}
+
 @import 'welcome';
 @import 'welcome.animation';
+@import "sign.animation";
 @import 'signIn';
 @import 'signUp';
 @import 'form.validation';
+@import 'summary';

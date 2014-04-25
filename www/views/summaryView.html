@@ -8,7 +8,8 @@
       <th>Your Answer</th>
       <th>Correct Answer</th>
     </tr>
-    <tr class="result" ng-class="{'red': (tasks[$index] | eval) != result, 'success':(tasks[$index] | eval) == result }"
+    <tr class="result has-error"
+        ng-class="{'result-error': (tasks[$index] | eval) != result, 'result-success':(tasks[$index] | eval) == result }"
         ng-repeat="result in results track by $index">
 
       <td ng-bind="tasks[$index]"></td>
@@ -17,4 +18,9 @@
     </tr>
 
   </table>
+  <div class="form-group">
+    <a ng-href="#/">
+      <button class="btn btn-default btn-block" ng-href="#/">Back</button>
+    </a>
+  </div>
 </div>

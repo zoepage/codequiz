@@ -10,17 +10,19 @@ main > div {
   left: 0;
   right: 0;
   position: absolute;
-  background-color: #ff8e8e; }
+  background-color: #ff8e8e;
+  padding-top: 30px; }
 
-.signAnimation.ng-enter {
-  -webkit-transition: 1s linear all;
-  transition-delay: 2.3s;
-  -webkit-transition-delay: 2.3s;
-  /* Safari */
-  opacity: 0; }
-
-.signAnimation.ng-enter-active {
-  opacity: 1; }
+main > h1 {
+  z-index: 10;
+  position: relative;
+  margin: 0 auto;
+  width: 190px; }
+  main > h1 a {
+    color: black; }
+  main > h1 a:hover {
+    color: black;
+    text-decoration: none; }
 
 .welcome {
   height: 100%; }
@@ -107,6 +109,16 @@ main > div {
     height: -webkit-calc(100%);
     height: calc(100%); } }
 
+.signAnimation.ng-enter {
+  -webkit-transition: 1s linear all;
+  transition-delay: 2.3s;
+  -webkit-transition-delay: 2.3s;
+  /* Safari */
+  opacity: 0; }
+
+.signAnimation.ng-enter-active {
+  opacity: 1; }
+
 .signInPageContainer {
   background-color: #ff8e8e;
   height: 100%; }
@@ -157,3 +169,9 @@ form input.ng-invalid:focus {
 
 form input.ng-valid.ng-dirty {
   background-color: #1dca07; }
+
+.result-success {
+  background-color: #dff0d8; }
+
+.result-error {
+  background-color: #f2dede; }
