@@ -11,10 +11,10 @@
   <link href="components/google-code-prettify/styles/sunburst.css" media="all" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="styles/style.css"/>
 </head>
-<body>
+<body ng-controller="animationStyleCtrl">
 
-<main ng-controller="animationStyleCtrl">
-  <div class="container {{animationClass}}" ng-view></div>
+<main class="{{animationOptions.backgroundClass}}PageContainer">
+  <div class="{{animationOptions.animationClass}}" ng-view></div>
 </main>
 
 

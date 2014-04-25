@@ -1,0 +1,10 @@
+.signAnimation.ng-enter {
+  -webkit-transition: 1s linear all;
+  transition-delay: #{$routeChangeTime+0.3}s;
+  -webkit-transition-delay: #{$routeChangeTime+0.3}s; /* Safari */
+  opacity: 0;
+}
+
+.signAnimation.ng-enter-active {
+  opacity: 1;
+}

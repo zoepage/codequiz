@@ -1,0 +1,38 @@
+.signAnimation.ng-enter {
+  -webkit-transition: 1s linear all;
+  opacity: 0; }
+
+.signAnimation.ng-enter-active {
+  opacity: 0; }
+
+@-webkit-keyframes rotate180 {
+  from {
+    -webkit-transform: rotateX(0deg); }
+
+  to {
+    -webkit-transform: rotateX(180deg); } }
+
+@-webkit-keyframes minimize {
+  from {
+    height: -webkit-calc(50%);
+    height: calc(50%); }
+
+  50% {
+    height: -webkit-calc(50%);
+    height: calc(50%); }
+
+  to {
+    height: 0px; } }
+
+@-webkit-keyframes maximize {
+  from {
+    height: -webkit-calc(50%);
+    height: calc(50%); }
+
+  50% {
+    height: -webkit-calc(50%);
+    height: calc(50%); }
+
+  to {
+    height: -webkit-calc(100%);
+    height: calc(100%); } }

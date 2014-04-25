@@ -1,16 +1,28 @@
 $color1: #67C7E2;
 $color2: #FF8E8E;
-$routeChangeTime: 3;
+$routeChangeTime: 2;
 
+
+
+html, body{
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+}
+
+main > div {
+  height: 100%;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: $color2;
+}
+
+@import "sign.animation";
 @import 'welcome';
 @import 'welcome.animation';
 @import 'signIn';
 @import 'signUp';
 @import 'form.validation';
-
-html, body, main, .container {
-  height: 100%;
-  width: 100%;
-  padding: 0px;
-  background-color: $color1;
-}

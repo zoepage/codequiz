@@ -2,7 +2,10 @@
 
 angular.module('codeQuiz')
   .controller('SignInCtrl', function ($scope, hoodieAccount, $location) {
-    $scope.action = "Sign In";
+    $scope.action = "signIn";
+    $scope.class = "signIn";
+    $scope.animationOptions.animationClass = 'signAnimation';
+    $scope.animationOptions.backgroundClass = 'signIn';
     $scope.actionFn = function (user, pass) {
       hoodieAccount.signIn(user, pass)
         .then(function () {

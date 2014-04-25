@@ -1,3 +1,27 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0px; }
+
+main > div {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: #ff8e8e; }
+
+.signAnimation.ng-enter {
+  -webkit-transition: 1s linear all;
+  transition-delay: 2.3s;
+  -webkit-transition-delay: 2.3s;
+  /* Safari */
+  opacity: 0; }
+
+.signAnimation.ng-enter-active {
+  opacity: 1; }
+
 .welcome {
   height: 100%; }
   .welcome a {
@@ -36,19 +60,19 @@
         -webkit-transform-origin: top; }
 
 .welcomeAnimation.ng-leave {
-  -webkit-transition: 3s linear all; }
+  -webkit-transition: 2s linear all; }
   .welcomeAnimation.ng-leave .welcome .active .inner {
-    -webkit-animation: rotate180 1.5s;
+    -webkit-animation: rotate180 1s;
     -webkit-transform: rotateX(180deg);
     z-index: 1; }
     .welcomeAnimation.ng-leave .welcome .active .inner p {
-      -webkit-animation: rotate180 1.5s;
+      -webkit-animation: rotate180 1s;
       -webkit-transform: rotateX(180deg); }
   .welcomeAnimation.ng-leave .welcome .active {
-    -webkit-animation: minimize 3s;
+    -webkit-animation: minimize 2s;
     height: 0px; }
   .welcomeAnimation.ng-leave .welcome .inactive {
-    -webkit-animation: maximize 3s;
+    -webkit-animation: maximize 2s;
     height: 0px; }
 
 @-webkit-keyframes rotate180 {
@@ -133,9 +157,3 @@ form input.ng-invalid:focus {
 
 form input.ng-valid.ng-dirty {
   background-color: #1dca07; }
-
-html, body, main, .container {
-  height: 100%;
-  width: 100%;
-  padding: 0px;
-  background-color: #67c7e2; }

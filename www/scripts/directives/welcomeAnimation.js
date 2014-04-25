@@ -4,11 +4,11 @@ angular.module('codeQuiz')
   .directive('welcomeAnimation', function () {
     return {
       link: function (scope) {
-        var animationClass = scope.animationClass;
-        scope.animationClass = 'welcomeAnimation'
+        var animationClass = scope.animationOptions.animationClass;
+        scope.animationOptions.animationClass = 'welcomeAnimation'
 
         scope.$on('$destroy', function () {
-          scope.animationClass = animationClass;
+          scope.animationOptions.animationClass = animationClass;
         });
       }
     }

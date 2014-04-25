@@ -2,5 +2,8 @@
 
 angular.module('codeQuiz')
   .controller('animationStyleCtrl', function ($scope) {
-    $scope.animationClass = '';
+    $scope.animationOptions = {
+      animationClass : '',
+      backGroundClass: ''
+    } ;
   });
