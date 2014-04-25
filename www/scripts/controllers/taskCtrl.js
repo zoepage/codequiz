@@ -4,7 +4,7 @@ angular.module("codeQuiz")
         var tasks = DataHolderService.getTasks();
         $scope.taskId = parseInt($routeParams.taskId, 10);
         $scope.task = tasks[$scope.taskId - 1];
-        $scope.sumTasks = tasks.length;
+        $scope.sumTasks = 10;//tasks.length;
 
         $scope.saveResult = function (result) {
             var results = DataHolderService.getResults();

@@ -8,12 +8,12 @@
       <th>Your Answer</th>
       <th>Correct Answer</th>
     </tr>
-    <tr class="result" ng-class="{'red': (task | eval) != results[$index], 'success':(task | eval) == results[$index] }"
-        ng-repeat="task in tasks">
+    <tr class="result" ng-class="{'red': (tasks[$index] | eval) != result, 'success':(tasks[$index] | eval) == result }"
+        ng-repeat="result in results track by $index">
 
-      <td ng-bind="task"></td>
-      <td ng-bind="results[$index]"></td>
-      <td ng-bind="task | eval"></td>
+      <td ng-bind="tasks[$index]"></td>
+      <td ng-bind="result"></td>
+      <td ng-bind="tasks[$index] | eval"></td>
     </tr>
 
   </table>
