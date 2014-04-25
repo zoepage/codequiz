@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-sm-12">
+    <a href="#/" class="btn btn-default" role="button"><span class="glyphicon glyphicon-home"></span> Go back</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <h1>Hi {{account.username}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <img gravatar-src="account.username" gravatar-size="300" class="img-rounded img-responsive">
+  </div>
+  <div class="col-sm-6">
+    <p>Your profile picture comes from <a href="http://www.gravatar.com/">www.gravatar.com</a>.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <button class="btn btn-danger btn-block" ng-click="signOut()">Log out</button>
+  </div>
+</div>
