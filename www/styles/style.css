@@ -71,7 +71,9 @@ main > h1 {
   .welcomeAnimation.ng-leave .welcome .active .inner {
     -webkit-animation: rotate180 1s;
     -webkit-transform: rotateX(180deg);
-    z-index: 1; }
+    z-index: 1;
+    width: 201px;
+    height: 101px; }
     .welcomeAnimation.ng-leave .welcome .active .inner p {
       -webkit-animation: rotate180 1s;
       -webkit-transform: rotateX(180deg); }
