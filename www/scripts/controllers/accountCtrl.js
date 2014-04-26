@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module('codeQuiz')
-  .controller('AccountCtrl', function ($scope, hoodieAccount, $location) {
+  .controller('AccountCtrl', function ($scope, hoodieAccount, $location, hoodieArray) {
     $scope.account = hoodieAccount;
     $scope.userAction = {
       signIn: function (user, pass) {
@@ -22,5 +22,6 @@ angular.module('codeQuiz')
             $location.path('/game');
           });
       }
-    }
+    };
+    hoodieArray.bind($scope, 'results');
   });
