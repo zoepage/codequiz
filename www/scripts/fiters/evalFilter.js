@@ -5,6 +5,6 @@ angular.module("codeQuiz")
         input = input.replace('if(', '').replace(')', '');
         input = 'new Boolean(' + input + ')';
       }
-      return eval(input).toString();
+      return (input)?eval(input).toString():'undefined';
     };
   });
