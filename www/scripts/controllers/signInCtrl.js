@@ -7,6 +7,6 @@ angular.module('codeQuiz')
       $scope.userAction.signIn(user, pass)
         .then(undefined, function (hoodieError) {
           $scope.signForm.$error.message = hoodieError.message;
-        })
-    }
+        });
+    };
   });

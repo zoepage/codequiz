@@ -1,5 +1,5 @@
 angular.module("codeQuiz")
-  .controller("TaskCtrl", function ($scope, $routeParams, $location, $timeout, GameInstanceService) {
+  .controller("TaskCtrl", function ($scope, $routeParams, $location, $timeout, GameInstanceService, hoodieStore, hoodieAccount) {
     'use strict';
     var tasks = GameInstanceService.getGame($routeParams.category);
     $scope.taskId = parseInt($routeParams.taskId, 10);
@@ -12,7 +12,16 @@ angular.module("codeQuiz")
       if ($scope.taskId < $scope.sumTasks) {
         $location.path("/game/" + $routeParams.category + "/" + ($scope.taskId + 1));
       } else {
-        $location.path("/game/" + $routeParams.category + "/summary");
+
+        hoodieStore.add('results', {
+          gameCategroy: $routeParams.category,
+          results: results,
+          tasks: tasks,
+          user: hoodieAccount.username
+        })
+          .then(function(savedObject) {
+            $location.path("/game/" + $routeParams.category + "/summary");
+          });
       }
 
     };

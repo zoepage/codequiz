@@ -5,7 +5,7 @@ angular.module('codeQuiz')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/WelcomeView.html'
+        templateUrl: 'views/welcomeView.html'
       })
       .when('/welcome/signIn', {
         controller: 'SignInCtrl',

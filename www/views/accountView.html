@@ -22,4 +22,34 @@
       <button class="btn btn-danger btn-block" ng-click="userAction.signOut()">Log out</button>
     </div>
   </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12">
+      <strong>Your results</strong>
+
+      <ul>
+        <li ng-repeat="result in results">
+          Game {{ $index+1 }} finished at {{ result.createdAt | date:'medium' }}: <br>
+          <table class="table">
+            <tr>
+              <th>Task</th>
+              <th>Your Answer</th>
+              <th>Correct Answer</th>
+            </tr>
+            <tr class="result has-error"
+                ng-class="{'result-error': (tasks[$index] | eval) != result, 'result-success':(tasks[$index] | eval) == result }"
+                ng-repeat="resultItem in result.results track by $index">
+
+              <td ng-bind="result.tasks[$index]"></td>
+              <td ng-bind="resultItem"></td>
+              <td ng-bind="result.tasks[$index] | eval"></td>
+            </tr>
+
+          </table>
+        </li>
+      </ul>
+
+      <pre>results = {{ results | json }}</pre>
+    </div>
+  </div>
 </div>
