@@ -29,6 +29,10 @@ main > h1 {
     color: black;
     text-decoration: none; }
 
+li.categorylist a,
+li.categorylist a:hover {
+  color: red; }
+
 .welcome {
   height: 100%; }
   .welcome a {

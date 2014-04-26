@@ -26,20 +26,23 @@ main > div {
   height: 100%;
 }
 
-
-
 main > h1 {
   z-index: 10;
   position: relative;
   margin: 0 auto;
   width: 190px;
-  a{
+  a {
     color: black;
   }
-  a:hover{
+  a:hover {
     color: black;
     text-decoration: none;
   }
+}
+
+li.categorylist a,
+li.categorylist a:hover {
+  color: red
 }
 
 @import 'welcome';
