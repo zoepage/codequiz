@@ -5,7 +5,7 @@
       -webkit-animation: rotate180 #{$routeChangeTime/2}s;
       -webkit-transform: rotateX(180deg);
       z-index: 1;
-      width: $circleSize+1;
+      width: $circleSize+1; /* Little Hack to make it looks nice */
       height: $circleSize/2 +1;
       p {
         -webkit-animation: rotate180 #{$routeChangeTime/2}s;
