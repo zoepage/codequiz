@@ -1,0 +1,35 @@
+body{
+	max-height: 100%;
+}
+
+.PageContainer {
+	min-width: 400px;
+	max-width: 500px;
+	min-height: 400px;
+	margin: 60px auto;
+	padding: 12px 20px;
+}
+
+.list {
+	margin-top: -100px;
+	padding-top: 100px;
+	table { margin-top: 25px; }
+	tr {
+		td, th { padding: 5px 9px; }
+
+		&:nth-child(2n) {
+			background-color: #e5eaeb;
+		}
+	}
+}
+.r {
+	float: right;
+}
+
+.l {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}

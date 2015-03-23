@@ -1,0 +1,129 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  max-height: 100%; }
+
+.PageContainer {
+  min-width: 400px;
+  max-width: 500px;
+  min-height: 400px;
+  margin: 60px auto;
+  padding: 12px 20px; }
+
+.list {
+  margin-top: -100px;
+  padding-top: 100px; }
+  .list table {
+    margin-top: 25px; }
+  .list tr td, .list tr th {
+    padding: 5px 9px; }
+  .list tr:nth-child(2n) {
+    background-color: #e5eaeb; }
+
+.r {
+  float: right; }
+
+.l {
+  float: left; }
+
+.clear {
+  clear: both; }
+
+body,
+a {
+  color: #7e8182; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff; }
+
+.PageContainer {
+  background-color: #e5eaeb; }
+
+.btn {
+  color: #ffffff;
+  background-color: #e74c3c; }
+
+.list {
+  background-color: #ffffff; }
+
+.name {
+  color: #e74c3c; }
+
+.btn {
+  width: 150px;
+  height: 30px;
+  border: 0 none; }
+
+.menu {
+  margin-bottom: 30px; }
+
+.form-signin .name {
+  margin-top: 120px;
+  text-align: right;
+  position: absolute;
+  min-width: 300px; }
+
+.img-rounded {
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+  width: 150px;
+  height: 150px;
+  border: 7px solid #fff;
+  margin: 20px 10px; }
+
+body {
+  font-size: 16px;
+  font-family: "roboto", serif; }
+
+.btn {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: none; }
+
+.list thead th {
+  font-weight: 500; }
+
+.name {
+  font-weight: 500; }
+
+h1 {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */

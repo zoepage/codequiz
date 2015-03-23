@@ -1,0 +1,32 @@
+$gray1: 	#e5eaeb;
+$gray2: 	#d3d5d6;
+$gray3: 	#7e8182;
+$red1: 		#e74c3c;
+$red2: 		#98281c;
+$white: 	#ffffff;
+
+body,
+a {
+	color: $gray3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $white;
+}
+
+.PageContainer {
+	background-color: $gray1;
+}
+
+.btn {
+	color: $white;
+	background-color: $red1;
+}
+
+.list {
+	background-color: $white;
+}
+
+.name {
+	color: $red1;
+}

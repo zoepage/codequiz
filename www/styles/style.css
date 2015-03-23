@@ -9,22 +9,27 @@ main > div {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #67c7e2;
+  background-color: #276982;
   position: absolute; }
   main > div .form-signin {
     padding-top: 60px; }
 
 .defaultPageContainer {
-  background-color: #67c7e2;
+  background-color: #276982;
   height: 100%; }
 
 main > h1 {
   z-index: 10;
   position: relative;
-  margin: 0 auto;
+  margin: 3% auto 0;
   width: 190px; }
   main > h1 a {
-    color: black; }
+    color: white;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 0.2em;
+    margin-left: -0.7em; }
   main > h1 a:hover {
     color: black;
     text-decoration: none; }
@@ -52,22 +57,23 @@ li.categorylist a:hover {
         width: 200px; }
       .welcome .innerWelcome .welcomeContainer p {
         position: absolute;
-        top: 20px;
+        top: 40px;
         left: 0px;
-        width: 200px; }
+        width: 200px;
+        font-style: 20px !important; }
     .welcome .innerWelcome .signInContainer {
-      background-color: #67c7e2; }
+      background-color: #276982; }
       .welcome .innerWelcome .signInContainer .signInInner {
         bottom: 0px;
         border-radius: 200px 200px 0 0;
-        background-color: #ff8e8e;
+        background-color: #4D8DA6;
         -webkit-transform-origin: bottom; }
     .welcome .innerWelcome .signUpContainer {
-      background-color: #ff8e8e; }
+      background-color: #4D8DA6; }
       .welcome .innerWelcome .signUpContainer .signUpInner {
         top: 0px;
         border-radius: 0 0 200px 200px;
-        background-color: #67c7e2;
+        background-color: #276982;
         -webkit-transform-origin: top; }
 
 .welcomeAnimation.ng-leave {
@@ -92,35 +98,27 @@ li.categorylist a:hover {
 @-webkit-keyframes rotate180 {
   from {
     -webkit-transform: rotateX(0deg); }
-
   to {
     -webkit-transform: rotateX(180deg); } }
-
 @-webkit-keyframes minimize {
   from {
     height: -webkit-calc(50%);
     height: calc(50%); }
-
   50% {
     height: -webkit-calc(50%);
     height: calc(50%); }
-
   to {
     height: 0px; } }
-
 @-webkit-keyframes maximize {
   from {
     height: -webkit-calc(50%);
     height: calc(50%); }
-
   50% {
     height: -webkit-calc(50%);
     height: calc(50%); }
-
   to {
     height: -webkit-calc(100%);
     height: calc(100%); } }
-
 .signAnimation.ng-enter {
   -webkit-transition: 1s linear all;
   transition-delay: 2.3s;
@@ -132,7 +130,7 @@ li.categorylist a:hover {
   opacity: 1; }
 
 .signInPageContainer {
-  background-color: #ff8e8e;
+  background-color: #4D8DA6;
   height: 100%; }
 
 .form-signin {
@@ -170,7 +168,7 @@ li.categorylist a:hover {
   border-top-right-radius: 0; }
 
 .signUpPageContainer {
-  background-color: #67c7e2;
+  background-color: #276982;
   height: 100%; }
 
 form input.ng-invalid.ng-dirty {
@@ -187,3 +185,5 @@ form input.ng-valid.ng-dirty {
 
 .result-error {
   background-color: #f2dede; }
+
+/*# sourceMappingURL=style.css.map */
